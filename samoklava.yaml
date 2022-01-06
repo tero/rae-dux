@@ -33,43 +33,44 @@ points:
       key.padding: ky
       columns:
         pinky:
+          spread: 18
+          rotate: 15
+          origin: [0, -ky]
           key:
             bind: [0.1, 0.5 kx, 0.1, 0.1]
             column_net: P20
-          spread: 18
-          rotate: 15
-          origin: [0, -17]
         ring:
+          spread: 18
+          stagger: 2 ky /3
+          rotate: -10
+          origin: [0, -ky]
           key:
             bind: [0.1, 0.5 kx, 0.1, 0.1]
             column_net: P19
-          spread: 18
-          stagger: 17
-          rotate: -10
-          origin: [0, -17]
         middle:
           spread: 18
-          stagger: 17/3
+          stagger: ky/3
           rotate: -5
-          origin: [0, -17]
+          origin: [0, -ky]
           key:
             bind: [0.1, 0.1, 0.5 kx, 0.1]
             shift: [0.2, 0]
             column_net: P18
         index:
+          spread: 18
+          stagger: -ky/3
+          rotate: -5
+          origin: [0, -ky]
           key:
             bind: [0.1, 0.1, 0.5 kx, 0.5 kx]
             column_net: P15
-          spread: 18
-          stagger: -17/3
-          rotate: -5
-          origin: [0, -17]
         inner:
-          key:
-            column_net: P14
           spread: 19
-          stagger: -17/6
-          origin: [0, -17]
+          stagger: -ky/6
+          origin: [0, -ky]
+          key:
+            bind: [0.1, 0.1, 0.1, 0.5 kx]
+            column_net: P14
       rows:
         bottom:
           row_net: P6
@@ -80,7 +81,7 @@ points:
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
-        shift: [-1.25 kx, -1.5 ky]
+        shift: [-1.10 kx, -1.0 ky]
       columns:
         near:
           spread: kx
@@ -119,7 +120,7 @@ outlines:
           - ref: thumbfan_far_thumb
             shift: [0.5 kx - 0.5px, -0.5 ky - 0.5 py]
           - ref: thumbfan_near_thumb
-            shift: [-0.5 kx + 0.5 px, -0.5 ky - 0.5 py]
+            shift: [-0.5 kx - px, -0.5 ky - py]
           - ref: matrix_pinky_bottom
             shift: [0.5 kx - 0.5 py, -0.5 ky - 0.5 py]
           - ref: matrix_pinky_home
@@ -143,16 +144,14 @@ outlines:
         type: outline
         name: thumbfan_glue
         operation: add
-        fillet: 2
       controller_area:
         type: outline
         name: controller_area
         operation: add
-        fillet: 2
     pcb:
       - type: outline
         name: base_outline
-        fillet: 3
+        fillet: 15
 pcbs:
   board:
     outlines:
@@ -296,7 +295,7 @@ pcbs:
         anchor:
           ref:
             - matrix_inner_bottom
-          shift: [17, 0]
+          shift: [ky, 0]
           rotate: 270
         params:
           variant: 2_pin_th
