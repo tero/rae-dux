@@ -1,0 +1,3 @@
+* rae-dux
+| [[images/board-front.png]] | [[images/board-back.png]] |
+The rae-dux is a keyboard inspired by the [[https://github.com/tapioki/cephalopoda/tree/main/Architeuthis%20dux][Architeuthis Dux]] and built using the [[https://github.com/soundmonster/samoklava][samoklava workflow]].
