@@ -1,8 +1,8 @@
 {
     "scripts": {
-        "gen": "ergogen samoklava.yaml"
+        "gen": "ergogen rae-dux.yaml"
     },
     "dependencies": {
-        "ergogen": "github:andrewjrae/ergogen#samoklava"
+        "ergogen": "github:soundmonster/ergogen#samoklava"
     }
 }
