@@ -1,11 +1,12 @@
 * rae-dux
 | [[images/board-front.png]] | [[images/board-back.png]] |
+
 The rae-dux is a keyboard inspired by the [[https://github.com/tapioki/cephalopoda/tree/main/Architeuthis%20dux][Architeuthis Dux]] and built using the [[https://github.com/soundmonster/samoklava][samoklava workflow]].
 
-*Has yet to be tested printed and tested!*
+*Has yet to be printed and tested!*
 
 ** Changes from samoklava
 - Added a-dux like splay, fitted to my hand
   + Filled in holes that came from the new splay by using the bind functionality
-  + *Important*: had to ensure that the MCU footprint was upright otherwise autorouting failed
+  + *Important*: had to ensure that the MCU footprint was upright otherwise auto-routing failed
 - Removed case holes and case
