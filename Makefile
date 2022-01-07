@@ -10,7 +10,7 @@ setup:
 	npm install
 
 # outputs from 
-output/pcbs/board.kicad_pcb output/pcbs/top_plate.kicad_pcb output/pcbs/bottom_plate.kicad_pcb &: samoklava.yaml
+output/pcbs/board.kicad_pcb &: rae-dux.yaml
 	npm run gen
 
 output/pcbs/%.dsn: output/pcbs/%.kicad_pcb
@@ -20,7 +20,7 @@ output/pcbs/%.dsn: output/pcbs/%.kicad_pcb
 
 output/routed_pcbs/%.ses: output/pcbs/%.dsn
 	mkdir -p $(shell dirname $@)
-	${container_cmd} run ${container_args} soundmonster/freerouting_cli:v0.1.0 java -jar /opt/freerouting_cli.jar -us hybrid -de $< -do $@
+	${container_cmd} run ${container_args} soundmonster/freerouting_cli:v0.1.0 java -jar /opt/freerouting_cli.jar -de $< -do $@
 
 output/routed_pcbs/%.kicad_pcb: output/routed_pcbs/%.ses output/pcbs/%.kicad_pcb
 	mkdir -p $(shell dirname $@)
@@ -34,11 +34,11 @@ output/routed_pcbs/%-drc/: output/routed_pcbs/%.kicad_pcb
 
 output/routed_pcbs/%-front.png: output/routed_pcbs/%.kicad_pcb
 	mkdir -p $(shell dirname $@)
-	${container_cmd} run ${container_args} yaqwsx/kikit:v0.7 pcbdraw --style builtin:oshpark-afterdark.json $< $@
+	${container_cmd} run ${container_args} yaqwsx/kikit:v1.0.0 pcbdraw --style builtin:oshpark-afterdark.json $< $@
 
 output/routed_pcbs/%-back.png: output/routed_pcbs/%.kicad_pcb
 	mkdir -p $(shell dirname $@)
-	${container_cmd} run ${container_args} yaqwsx/kikit:v0.7 pcbdraw -b --style builtin:oshpark-afterdark.json $< $@
+	${container_cmd} run ${container_args} yaqwsx/kikit:v1.0.0 pcbdraw -b --style builtin:oshpark-afterdark.json $< $@
 
 output/gerbers/%/gerbers.zip: output/routed_pcbs/%.kicad_pcb
 	mkdir -p $(shell dirname $@)

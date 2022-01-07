@@ -306,18 +306,20 @@ pcbs:
         type: text
         anchor:
           ref:
-            - matrix_pinky_bottom
-          shift: [0.75 kx, 0]
+            - thumbfan_near_thumb
+          shift: [ -1.1 kx, 0]
+          rotate: 15
         params:
-          text: "rae-dux v1.0\\nby ajrae"
+          text: "rae-dux v0.1\\nby ajrae"
           justify: left
       info_r:
         type: text
         anchor:
           ref:
-            - matrix_pinky_bottom
-          shift: [0.75 kx, 0]
+            - thumbfan_near_thumb
+          shift: [ -1.1 kx, 0]
+          rotate: 15
         params:
           layer: B.SilkS
-          text: "rae-dux v1.0\\nby ajrae"
+          text: "rae-dux v0.1\\nby ajrae"
           justify: right mirror
