@@ -6,32 +6,27 @@ units:
 points:
   key:
     footprints:
-      choc_soldered:
+      choc_hotswap:
+        type: choc
+        nets:
+          from: =column_net
+          to: GND
+        params:
+            keycaps: true
+            reverse: true
+            hotswap: true
+      choc:
         type: choc
         anchor:
           rotate: 180
+        nets:
+          from: =column_net
+          to: GND
         params:
-          hotswap: false
-          reverse: true
-          keycaps: true
-        nets:
-          # from: P1
-          # to: P2
-          from: =colrow
-          to: =column_net
-      diode:
-        type: diode
-        nets:
-          # from: P3
-          # to: P4
-          from: =colrow
-          to: =row_net
-        anchor:
-          shift: [0, 5]
+            keycaps: true
+            reverse: true
   zones:
     matrix:
-      # anchor:
-      #   rotate: 5
       key.padding: ky
       columns:
         pinky:
@@ -40,7 +35,13 @@ points:
           origin: [0, -ky]
           key:
             bind: [0.1, 0.5 kx, 0.1, 0.1]
-            column_net: P20
+          rows:
+            bottom:
+              column_net: P6
+            home:
+              column_net: P5
+            top:
+              column_net: P4
         ring:
           spread: 18
           stagger: 2 ky /3
@@ -48,8 +49,14 @@ points:
           origin: [0, -ky]
           key:
             bind: [0.1, 0.5 kx, 0.1, 0.1]
-            column_net: P19
-        middle:
+          rows:
+            bottom:
+              column_net: P3
+            home:
+              column_net: P2
+            top:
+              column_net: P0
+        home:
           spread: 18
           stagger: ky/3
           rotate: -5
@@ -57,7 +64,13 @@ points:
           key:
             bind: [0.1, 0.1, 0.5 kx, 0.1]
             shift: [0.2, 0]
-            column_net: P18
+          rows:
+            bottom:
+              column_net: P1
+            home:
+              column_net: P10
+            top:
+              column_net: P16
         index:
           spread: 18
           stagger: -ky/3
@@ -65,21 +78,26 @@ points:
           origin: [0, -ky]
           key:
             bind: [0.1, 0.1, 0.5 kx, 0.5 kx]
-            column_net: P15
+          rows:
+            bottom:
+              column_net: P14
+            home:
+              column_net: P15
+            top:
+              column_net: P18
         inner:
           spread: 19
           stagger: -ky/6
           origin: [0, -ky]
           key:
             bind: [0.1, 0.1, 0.1, 0.5 kx]
-            column_net: P14
-      rows:
-        bottom:
-          row_net: P6
-        home:
-          row_net: P5
-        top:
-          row_net: P4
+          rows:
+            bottom:
+              column_net: P19
+            home:
+              column_net: P20
+            top:
+              column_net: P21
     thumbfan:
       anchor:
         ref: matrix_inner_bottom
@@ -90,19 +108,19 @@ points:
           rotate: -15
           origin: [-1.5 kx, -0.5 ky]
           key:
-            column_net: P18
+            column_net: P7
         home:
           spread: kx
           rotate: -15
           origin: [-0.5 kx, -0.5 ky]
           key:
-            column_net: P15
+            column_net: P8
         far:
           spread: kx
           rotate: -15
           origin: [-0.5 kx, -0.5 ky]
           key:
-            column_net: P14
+            column_net: P9
       rows:
         thumb:
           row_net: P7
@@ -165,7 +183,7 @@ pcbs:
       mcu_l:
         type: promicro
         params:
-          orientation: up
+          orientation: down
           batteryPins: true
         anchor:
           ref:
@@ -201,7 +219,7 @@ pcbs:
         anchor:
           ref:
             - matrix_inner_bottom
-          shift: [27, -14]
+          shift: [27.5, -14]
           rotate: 270
         params:
           variant: 2_pin_th
