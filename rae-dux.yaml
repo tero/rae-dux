@@ -214,6 +214,17 @@ pcbs:
         nets:
           from: Braw
           to: Bplus
+      jst_bat:
+        type: bat
+        anchor:
+          ref:
+            - matrix_inner_bottom
+          shift: [20, -17.5]
+        params:
+          reverse: true
+        nets:
+          neg: Bminus
+          pos: Braw
       reset:
         type: button
         anchor:
