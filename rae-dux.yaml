@@ -68,9 +68,9 @@ points:
             bottom:
               column_net: P1
             home:
-              column_net: P10
+              column_net: P18
             top:
-              column_net: P16
+              column_net: P15
         index:
           spread: 18
           stagger: -ky/3
@@ -82,9 +82,9 @@ points:
             bottom:
               column_net: P14
             home:
-              column_net: P15
+              column_net: P16
             top:
-              column_net: P18
+              column_net: P10
         inner:
           spread: 19
           stagger: -ky/6
