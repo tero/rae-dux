@@ -9,8 +9,8 @@ samoklava workflow.
 *Has yet to be printed and tested!*
 
 ** Important Notes
-- Wireless only, the 36-key diodeless approach uses the P0 pin which is usually dedicated to TRRS
-- Their is only one MCU footprint, so one controller has to be flipped (I assume
+- *Wireless only*, the 36-key diodeless approach uses the P0 pin which is usually dedicated to TRRS
+- Their is only one MCU footprint, so *one controller has to be flipped* (I assume
    if you can get this printed you can figure out the correct orientation)
 - The [[./rae-dux.yaml][rae-dux.yaml]] file relies on [[https://github.com/andrewjrae/ergogen/tree/rae-dux][my fork of ergogen]] which naturally relies on
   [[https://github.com/soundmonster/ergogen/tree/samoklava][soundmonster's fork of ergogen]], and a simple JST battery footprint inspired by
