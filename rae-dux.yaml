@@ -27,6 +27,8 @@ points:
             reverse: true
   zones:
     matrix:
+      anchor:
+        shift: [50, 50]
       key.padding: ky
       columns:
         pinky:
@@ -44,7 +46,7 @@ points:
               column_net: P4
         ring:
           spread: 18
-          stagger: 2 ky /3
+          stagger: ky
           rotate: -7
           origin: [0, -ky]
           key:
@@ -169,9 +171,22 @@ outlines:
         name: controller_area
         operation: add
     pcb:
-      - type: outline
+      main:
+        type: outline
         name: base_outline
         fillet: 15
+    layout_tester:
+      main:
+        type: outline
+        name: pcb
+      keys:
+        type: keys
+        side: left
+        size: [kx - 0.01, ky - 0.01]
+        corner: px
+        bound: false
+        operation: subtract
+
 pcbs:
   board:
     outlines:
