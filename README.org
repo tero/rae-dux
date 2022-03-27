@@ -6,13 +6,14 @@ This project used to use the [[https://github.com/soundmonster/samoklava][samokl
 troubles with the splay, currently I just use the image generating parts of the
 samoklava workflow.
 
-*This has now been printed and is working perfectly, with ZMK!*
+*This has now been printed and is working perfectly with ZMK!*
 The ZMK shield can be found [[https://github.com/andrewjrae/zmk-config/tree/development/config/boards/shields/rae_dux][here]], as far as I can tell small custom projects
 like this aren't to be merged into ZMK main, so you'll have to emulate what I'm
 doing in my =zmk-config= here.
 
 ** Important Notes
 - *Wireless only*, the 36-key diodeless approach uses the P0 pin which is usually dedicated to TRRS
+- Since I ended up largely ditching the samoklava workflow, *the actions page with gerbers is out of date and no longer relevant**
 - Their is only one MCU footprint, so *one controller has to be flipped* (I assume
    if you can get this printed you can figure out the correct orientation)
 - The [[./rae-dux.yaml][rae-dux.yaml]] file relies on [[https://github.com/andrewjrae/ergogen/tree/rae-dux][my fork of ergogen]] which naturally relies on
