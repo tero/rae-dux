@@ -9,7 +9,12 @@ samoklava workflow.
 *This has now been printed and is working perfectly with ZMK!*
 The ZMK shield can be found [[https://github.com/andrewjrae/zmk-config/tree/development/config/boards/shields/rae_dux][here]], as far as I can tell small custom projects
 like this aren't to be merged into ZMK main, so you'll have to emulate what I'm
-doing in my =zmk-config= here.
+doing in my =zmk-config= [[https://github.com/andrewjrae/zmk-config/tree/development/config][here]].
+
+** Build Guide
+The wonderful @tzcl created a [[https://www.tzcl.me/blog/rae-dux][build guide]] for the rae-dux, so if you are curious
+about building the board, but don't have experience with this sort of thing go
+check it out!
 
 ** Important Notes
 - *Wireless only*, the 36-key diodeless approach uses the P0 pin which is usually dedicated to TRRS
