@@ -33,7 +33,7 @@ points:
       columns:
         pinky:
           spread: 18
-          rotate: 17
+          rotate: 0
           origin: [0, -ky]
           key:
             bind: [0.1, 0.5 kx, 0.1, 0.1]
@@ -46,8 +46,8 @@ points:
               column_net: P4
         ring:
           spread: 18
-          stagger: ky
-          rotate: -7
+          stagger: 0.66U
+          rotate: 0
           origin: [0, -ky]
           key:
             bind: [0.1, 0.5 kx, 0.1, 0.1]
@@ -60,8 +60,8 @@ points:
               column_net: P0
         home:
           spread: 18
-          stagger: ky/3
-          rotate: -5
+          stagger: 0.25U
+          rotate: 0
           origin: [0, -ky]
           key:
             bind: [0.1, 0.1, 0.5 kx, 0.1]
@@ -75,8 +75,8 @@ points:
               column_net: P15
         index:
           spread: 18
-          stagger: -ky/3
-          rotate: -5
+          stagger: -0.25U
+          rotate: 0
           origin: [0, -ky]
           key:
             bind: [0.1, 0.1, 0.5 kx, 0.5 kx]
@@ -89,7 +89,7 @@ points:
               column_net: P10
         inner:
           spread: 19
-          stagger: -ky/6
+          stagger: -0.15U
           origin: [0, -ky]
           key:
             bind: [0.1, 0.1, 0.1, 0.5 kx]
@@ -107,19 +107,19 @@ points:
       columns:
         near:
           spread: kx
-          rotate: -15
+          rotate: -10
           origin: [-1.5 kx, -0.5 ky]
           key:
             column_net: P7
         home:
           spread: kx
-          rotate: -15
+          rotate: -10
           origin: [-0.5 kx, -0.5 ky]
           key:
             column_net: P8
         far:
           spread: kx
-          rotate: -15
+          rotate: -10
           origin: [-0.5 kx, -0.5 ky]
           key:
             column_net: P9
@@ -161,7 +161,7 @@ outlines:
       main:
         type: outline
         name: raw
-        fillet: 2
+        fillet: 1
       thumbfan_glue:
         type: outline
         name: thumbfan_glue
@@ -174,7 +174,7 @@ outlines:
       main:
         type: outline
         name: base_outline
-        fillet: 15
+        fillet: 1
     layout_tester:
       main:
         type: outline
@@ -234,7 +234,7 @@ pcbs:
         anchor:
           ref:
             - matrix_inner_bottom
-          shift: [20, -17.5]
+          shift: [20, -7.5]
         params:
           reverse: true
         nets:
@@ -252,24 +252,4 @@ pcbs:
         nets:
           from: GND
           to: RST
-      info_l:
-        type: text
-        anchor:
-          ref:
-            - thumbfan_near_thumb
-          shift: [ -1.1 kx, 0]
-          rotate: 15
-        params:
-          text: "rae-dux v0.1\\nby ajrae"
-          justify: left
-      info_r:
-        type: text
-        anchor:
-          ref:
-            - thumbfan_near_thumb
-          shift: [ -1.1 kx, 0]
-          rotate: 15
-        params:
-          layer: B.SilkS
-          text: "rae-dux v0.1\\nby ajrae"
-          justify: right mirror
+
