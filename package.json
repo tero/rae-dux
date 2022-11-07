@@ -3,6 +3,6 @@
         "gen": "ergogen rae-dux.yaml"
     },
     "dependencies": {
-        "ergogen": "github:andrewjrae/ergogen#rae-dux"
+        "ergogen": "github:tero/ergogen#rae-dux"
     }
 }
