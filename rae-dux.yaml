@@ -70,9 +70,9 @@ points:
             bottom:
               column_net: P1
             home:
-              column_net: P18
+              column_net: P16
             top:
-              column_net: P15
+              column_net: P10
         index:
           spread: 18
           stagger: -0.25U
@@ -84,9 +84,9 @@ points:
             bottom:
               column_net: P14
             home:
-              column_net: P16
+              column_net: P15
             top:
-              column_net: P10
+              column_net: P18
         inner:
           spread: 19
           stagger: -0.15U
@@ -196,7 +196,7 @@ pcbs:
         # TODO there's a way to add stuff to the silkscreen layer
     footprints:
       mcu_l:
-        type: promicro
+        type: promicro_pretty
         params:
           orientation: down
           batteryPins: true
